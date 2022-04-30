@@ -6,3 +6,7 @@ Visual Studio Code on Browser (using Docker Container)
 
 ### Command
 ``` docker run -it --name code-server -p 127.0.0.1:8080:80 -v "D:/Workspace/Infrastructure/DockerVolume/.config:/home/coder/.config" -v "D:/Workspace/Infrastructure/DockerVolume/project:/home/coder/project" igrwijaya/vscode-cloud:latest```
+
+### Configuraiton
+- Setup ngrok:
+``` ngrok config add-authtoken <token> ```
