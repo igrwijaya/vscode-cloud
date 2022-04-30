@@ -1,0 +1,11 @@
+version: '3'
+services:
+  vscode-cloud:
+    image: igrwijaya/vscode-cloud:latest
+    container_name: vscode-cloud
+    restart: always
+    volumes:
+      - G:/Infrastructure/ImageVolume/vscode/.config:/home/coder/.config
+      - G:/Infrastructure/ImageVolume/vscode/project:/home/coder/project
+    ports:
+      - "8081:80"

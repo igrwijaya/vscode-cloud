@@ -3,9 +3,9 @@ FROM codercom/code-server
 RUN sudo apt-get update
 RUN sudo apt-get install -y wget
 
-RUN curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh 
-RUN sudo bash nodesource_setup.sh 
-RUN sudo apt install nodejs 
+RUN curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh
+RUN sudo bash nodesource_setup.sh
+RUN sudo apt install nodejs
 
 RUN node -v
 RUN sudo corepack enable
@@ -19,4 +19,4 @@ RUN sudo apt-get update; \
   sudo apt-get update && \
   sudo apt-get install -y dotnet-sdk-6.0
 
-ENTRYPOINT ["/usr/bin/entrypoint.sh", "--bind-addr", "0.0.0.0:8080", "."]
+ENTRYPOINT ["/usr/bin/entrypoint.sh", "--bind-addr", "0.0.0.0:80", "."]
